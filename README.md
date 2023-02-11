@@ -1,6 +1,6 @@
 # TheScoreQA Project - For theScore QA challenge
 
-POM.xml file included in project. To initialize the test please follow the following steps:
+**POM.xml file included in project. To initialize the test please follow the following steps:**
 
 1.) Install newest version of stable Maven (if not already installed): find further instructions here https://www.baeldung.com/install-maven-on-windows-linux-mac
 
@@ -19,4 +19,8 @@ POM.xml file included in project. To initialize the test please follow the follo
 8.) You can find test results in the test-output folder, these include many different standardized reports
 
 
+**Description and Coverage assessment:** The testing performed by the attached test was created to serve a simple purpose as requested by the challenge document. The reason i chose the particular data points usesd was because I believed they gave the best coverage of a team and their team stats without having access to the live and constantly updating data. With access to the database i would be able to provide a far more robust test for the team stats of a large data set of teams.
 
+
+
+LINK - Test Specification document = https://github.com/connoroffutt/TheScoreQA/blob/main/TheScoreQAChallengeSpecs.docx
