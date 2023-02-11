@@ -53,6 +53,12 @@ public class PageObjects extends TheScoreGroupId.TheScoreArtifactId.AndroidUtili
 	@AndroidFindBy(id="com.fivemobile.thescore:id/team_name")
 	public WebElement teamName;
 	
+	@AndroidFindBy(xpath="//android.widget.LinearLayout[@content-desc=\"Team Stats\"]/android.widget.TextView")
+	public WebElement teamStats;
+	
+	@AndroidFindBy(id="com.fivemobile.thescore:id/header_text")
+	public WebElement teamStatType1;
+	
 	
 	//functionality
 	public void enterUserNamePassword(String username, String password) 
