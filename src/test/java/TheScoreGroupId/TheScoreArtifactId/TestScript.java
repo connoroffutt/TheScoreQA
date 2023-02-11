@@ -12,12 +12,15 @@ public class TestScript extends BaseTestFeatures{
 	@DataProvider
 	public Object[][] GetDataLeague()
 	{
-		return new Object [][] {{"Arsenal", "STATS (EPL)"}};
+		return new Object [][] {{"Arsenal", "STATS (EPL)", "Tackles Succeeded"},
+			{"Detroit Lions","OFFENSE STATS","Total Yards"},
+			{"Toronto Raptors", "STATS", "Pythagorean Wins"}
+		};
 	}
 	
 	
 	@Test(dataProvider="GetDataLeague")
-	public void theScoreLeagueSelection(String team, String statHeaderExpected1)  
+	public void theScoreLeagueSelection(String team, String statHeaderExpected1, String statHeaderExpected2)  
 	{
 		PageObjects pageObjects = new PageObjects(driver);
 		
@@ -34,7 +37,8 @@ public class TestScript extends BaseTestFeatures{
 		Assert.assertEquals(teamTitleStatsPage, team);  //validate we are still on the same team's stat page
 		String statHeaderActual1 = pageObjects.teamStatType1.getText();
 		Assert.assertEquals(statHeaderActual1, statHeaderExpected1);
-		
+		pageObjects.scrollToElement(statHeaderExpected2); //scrolls to find stat if not available on screen
+		pageObjects.validateTeamStats(statHeaderExpected2);
 		
 	}
 	

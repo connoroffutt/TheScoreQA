@@ -10,6 +10,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.google.common.collect.ImmutableMap;
 
+import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
 public class AndroidUtilities {
 
@@ -29,6 +30,11 @@ public class AndroidUtilities {
 				ImmutableMap.of(
 						"x", 965, "y", 2382											
 						));
+	}
+	
+	public void scrollToElement(String ele)
+	{
+		driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector().scrollable(true))"+".scrollIntoView(textContains(\""+ele+"\"))"));
 	}
 	
 }

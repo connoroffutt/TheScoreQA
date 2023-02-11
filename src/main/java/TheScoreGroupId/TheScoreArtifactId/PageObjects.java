@@ -59,6 +59,15 @@ public class PageObjects extends TheScoreGroupId.TheScoreArtifactId.AndroidUtili
 	@AndroidFindBy(id="com.fivemobile.thescore:id/header_text")
 	public WebElement teamStatType1;
 	
+	@AndroidFindBy(xpath="//*[contains(@text, 'Tackles Succeeded')]")
+	public WebElement teamStatType2Arsenal;
+	
+	@AndroidFindBy(xpath="//*[contains(@text, 'Total Yards')]")
+	public WebElement teamStatType2Lions;
+	
+	@AndroidFindBy(xpath="//*[contains(@text, 'Pythagorean Wins')]")
+	public WebElement teamStatType2Raptors;
+	
 	
 	//functionality
 	public void enterUserNamePassword(String username, String password) 
@@ -77,6 +86,31 @@ public class PageObjects extends TheScoreGroupId.TheScoreArtifactId.AndroidUtili
 		searchBarType.sendKeys(team);
 		firstSearchResult.click();		
 		
+	}
+	
+	public void validateTeamStats(String teamStats2)
+	{
+		if (teamStats2.equals("Tackles Succeeded")) 
+		{
+			String statHeader2Arsenal = teamStatType2Arsenal.getText();
+			Assert.assertEquals(statHeader2Arsenal, teamStats2);
+			System.out.print(statHeader2Arsenal + " Equals " + teamStats2 );  //validate the requested stat is available
+			
+		}
+		else if (teamStats2.contains("Total Yards"))
+		{
+			String statHeader2Lions = teamStatType2Lions.getText();
+			Assert.assertEquals(statHeader2Lions, teamStats2);
+			System.out.print(statHeader2Lions + " Equals " + teamStats2 ); //validate the requested stat is available
+			
+		}	
+		else if (teamStats2.contains("Pythagorean Wins"))	
+		{
+			String statHeader2Raptors = teamStatType2Raptors.getText();
+			Assert.assertEquals(statHeader2Raptors, teamStats2);
+			System.out.print(statHeader2Raptors + " equals = " + teamStats2); //validate the requested stat is available
+			
+		}
 	}
 	
 }
