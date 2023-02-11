@@ -1,11 +1,10 @@
 package TheScoreGroupId.TheScoreArtifactId;
 
-import java.time.Duration;
+
 
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import io.appium.java_client.android.AndroidDriver;
@@ -67,6 +66,12 @@ public class PageObjects extends TheScoreGroupId.TheScoreArtifactId.AndroidUtili
 	
 	@AndroidFindBy(xpath="//*[contains(@text, 'Pythagorean Wins')]")
 	public WebElement teamStatType2Raptors;
+	
+	@AndroidFindBy(accessibility="Navigate up")
+	public WebElement backButton;
+	
+	@AndroidFindBy(accessibility="Today")
+	public WebElement todayTab;
 	
 	
 	//functionality

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-02-10T20:55:21 EST" name="Default suite" finished-at="2023-02-10T20:56:48 EST" duration-ms="86768">
+    <groups>
+    </groups>
+    <test started-at="2023-02-10T20:55:21 EST" name="Default test" finished-at="2023-02-10T20:56:48 EST" duration-ms="86768">
+      <class name="TheScoreGroupId.TheScoreArtifactId.TestScript">
+        <test-method is-config="true" signature="configureAppium()[pri:0, instance:TheScoreGroupId.TheScoreArtifactId.TestScript@59309333]" started-at="2023-02-10T20:55:21 EST" name="configureAppium" finished-at="2023-02-10T20:55:27 EST" duration-ms="5649" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configureAppium -->
+        <test-method is-config="true" signature="preSetup()[pri:0, instance:TheScoreGroupId.TheScoreArtifactId.TestScript@59309333]" started-at="2023-02-10T20:55:27 EST" name="preSetup" finished-at="2023-02-10T20:55:33 EST" duration-ms="6268" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preSetup -->
+        <test-method signature="theScoreLeagueSelection(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:TheScoreGroupId.TheScoreArtifactId.TestScript@59309333]" started-at="2023-02-10T20:55:33 EST" name="theScoreLeagueSelection" data-provider="GetDataLeague" finished-at="2023-02-10T20:55:57 EST" duration-ms="23501" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Arsenal]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[STATS (EPL)]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Tackles Succeeded]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- theScoreLeagueSelection -->
+        <test-method is-config="true" signature="postSetup()[pri:0, instance:TheScoreGroupId.TheScoreArtifactId.TestScript@59309333]" started-at="2023-02-10T20:55:57 EST" name="postSetup" finished-at="2023-02-10T20:55:57 EST" duration-ms="157" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postSetup -->
+        <test-method is-config="true" signature="preSetup()[pri:0, instance:TheScoreGroupId.TheScoreArtifactId.TestScript@59309333]" started-at="2023-02-10T20:55:57 EST" name="preSetup" finished-at="2023-02-10T20:56:01 EST" duration-ms="4477" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preSetup -->
+        <test-method signature="theScoreLeagueSelection(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:TheScoreGroupId.TheScoreArtifactId.TestScript@59309333]" started-at="2023-02-10T20:56:01 EST" name="theScoreLeagueSelection" data-provider="GetDataLeague" finished-at="2023-02-10T20:56:19 EST" duration-ms="17946" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Detroit Lions]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[OFFENSE STATS]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Total Yards]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- theScoreLeagueSelection -->
+        <test-method is-config="true" signature="postSetup()[pri:0, instance:TheScoreGroupId.TheScoreArtifactId.TestScript@59309333]" started-at="2023-02-10T20:56:19 EST" name="postSetup" finished-at="2023-02-10T20:56:19 EST" duration-ms="162" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postSetup -->
+        <test-method is-config="true" signature="preSetup()[pri:0, instance:TheScoreGroupId.TheScoreArtifactId.TestScript@59309333]" started-at="2023-02-10T20:56:19 EST" name="preSetup" finished-at="2023-02-10T20:56:24 EST" duration-ms="4460" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preSetup -->
+        <test-method signature="theScoreLeagueSelection(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:TheScoreGroupId.TheScoreArtifactId.TestScript@59309333]" started-at="2023-02-10T20:56:24 EST" name="theScoreLeagueSelection" data-provider="GetDataLeague" finished-at="2023-02-10T20:56:46 EST" duration-ms="21864" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Toronto Raptors]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[STATS]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Pythagorean Wins]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- theScoreLeagueSelection -->
+        <test-method is-config="true" signature="postSetup()[pri:0, instance:TheScoreGroupId.TheScoreArtifactId.TestScript@59309333]" started-at="2023-02-10T20:56:46 EST" name="postSetup" finished-at="2023-02-10T20:56:46 EST" duration-ms="193" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postSetup -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TheScoreGroupId.TheScoreArtifactId.TestScript@59309333]" started-at="2023-02-10T20:56:46 EST" name="tearDown" finished-at="2023-02-10T20:56:48 EST" duration-ms="2066" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- TheScoreGroupId.TheScoreArtifactId.TestScript -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

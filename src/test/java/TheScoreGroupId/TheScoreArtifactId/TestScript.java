@@ -39,7 +39,12 @@ public class TestScript extends BaseTestFeatures{
 		Assert.assertEquals(statHeaderActual1, statHeaderExpected1);
 		pageObjects.scrollToElement(statHeaderExpected2); //scrolls to find stat if not available on screen
 		pageObjects.validateTeamStats(statHeaderExpected2);
-		
+		pageObjects.backButton.click();
+		String validateSearchReturn = pageObjects.firstSearchResult.getText();
+		Assert.assertEquals(validateSearchReturn, team);
+		pageObjects.backButton.click();
+		boolean homePageReturnSuccess = pageObjects.todayTab.isDisplayed();
+		Assert.assertEquals(homePageReturnSuccess, true);
 	}
 	
 }

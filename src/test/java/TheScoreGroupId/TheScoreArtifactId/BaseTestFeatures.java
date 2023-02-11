@@ -23,7 +23,7 @@ public class BaseTestFeatures {
 	@BeforeClass
 	public void configureAppium() throws MalformedURLException {
 		
-		//code to start Appium server
+		//code to start Appium server - must point this service at your main.js file for test to work
 			service = new AppiumServiceBuilder().withAppiumJS(new File("C:\\Users\\conno\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js"))
 				.withIPAddress("0.0.0.0").usingPort(4723).build();
 			service.start();
