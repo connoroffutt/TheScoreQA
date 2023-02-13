@@ -1,0 +1,13 @@
+-------------------------------------------------------------------------------
+Test set: TheScoreGroupId.TheScoreArtifactId.TestScript
+-------------------------------------------------------------------------------
+Tests run: 11, Failures: 1, Errors: 0, Skipped: 10, Time elapsed: 20.434 s <<< FAILURE! - in TheScoreGroupId.TheScoreArtifactId.TestScript
+TheScoreGroupId.TheScoreArtifactId.TestScript.configureAppium  Time elapsed: 20.319 s  <<< FAILURE!
+io.appium.java_client.service.local.AppiumServerHasNotBeenStartedLocallyException: 
+The local appium server has not been started. The given Node.js executable: C:\Program Files\nodejs\node.exe Arguments: [C:\Users\conno\AppData\Roaming\npm\node_modules\appium\build\lib\main.js, --port, 4723, --address, 0.0.0.0] 
+Process output: [35m[Appium][39m [31mCommand 'npm.cmd --version' exited with code 1[39m
+
+
+Caused by: org.openqa.selenium.net.UrlChecker$TimeoutException: Timed out waiting for [http://127.0.0.1:4723/status] to be available after 20016 ms
+Caused by: java.util.concurrent.TimeoutException
+

@@ -1,9 +1,18 @@
 package TheScoreGroupId.TheScoreArtifactId;
 
 
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+
+import com.google.common.collect.ImmutableMap;
 
 import TheScoreGroupId.TheScoreArtifactId.PageObjects;
 
@@ -24,10 +33,13 @@ public class TestScript extends BaseTestFeatures{
 	{
 		PageObjects pageObjects = new PageObjects(driver);
 		
-		pageObjects.clickLogIn();
-		pageObjects.enterUserNamePassword("connoroffuttqa@gmail.com", "Testpassword123!");
-		pageObjects.dismissPopup.click();
+		//pageObjects.clickLogIn();
+		pageObjects.continueButton.click();
+		//pageObjects.enterUserNamePassword("connoroffuttqa@gmail.com", "Testpassword123!");
+		pageObjects.continueButton.click();		
 		pageObjects.dismissLocationPopup.click();
+		pageObjects.searchFavTeam(team);
+		pageObjects.dismissPopup.click();
 		pageObjects.searchAndSelectTeam(team);
 		String teamTitle = pageObjects.teamName.getText();
 		Assert.assertEquals(teamTitle, team);  //validate that the team we have selected is correct
@@ -43,7 +55,7 @@ public class TestScript extends BaseTestFeatures{
 		String validateSearchReturn = pageObjects.firstSearchResult.getText();
 		Assert.assertEquals(validateSearchReturn, team);
 		pageObjects.backButton.click();
-		boolean homePageReturnSuccess = pageObjects.todayTab.isDisplayed();
+		boolean homePageReturnSuccess = pageObjects.favouritesTab.isEnabled();
 		Assert.assertEquals(homePageReturnSuccess, true);
 	}
 	

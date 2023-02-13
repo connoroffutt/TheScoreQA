@@ -3,13 +3,18 @@ package TheScoreGroupId.TheScoreArtifactId;
 
 
 
+import java.awt.Point;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
+import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
-import io.appium.java_client.pagefactory.AppiumFieldDecorator;;
+import io.appium.java_client.pagefactory.AppiumFieldDecorator;
+import io.appium.java_client.touch.offset.PointOption;;
 
 public class PageObjects extends TheScoreGroupId.TheScoreArtifactId.AndroidUtilities {
 
@@ -25,6 +30,9 @@ public class PageObjects extends TheScoreGroupId.TheScoreArtifactId.AndroidUtili
 	}
 	//android page objects
 	
+	@AndroidFindBy(id="com.fivemobile.thescore:id/action_button_text")
+	public WebElement continueButton;
+	
 	@AndroidFindBy(id="com.fivemobile.thescore:id/email_input_edittext")
 	public WebElement userNameField;
 	
@@ -37,8 +45,14 @@ public class PageObjects extends TheScoreGroupId.TheScoreArtifactId.AndroidUtili
 	@AndroidFindBy(id="com.fivemobile.thescore:id/dismiss_modal")
 	public WebElement dismissPopup;
 	
+	@AndroidFindBy(id="com.fivemobile.thescore:id/follow_icon")
+	public WebElement followTeamButton;
+	
 	@AndroidFindBy(id="com.fivemobile.thescore:id/btn_disallow")
 	public WebElement dismissLocationPopup;
+	
+	@AndroidFindBy(id="com.fivemobile.thescore:id/search_bar_placeholder")
+	public WebElement searchFavTeam;
 	
 	@AndroidFindBy(id="com.fivemobile.thescore:id/search_bar_text_view")
 	public WebElement searchBar;
@@ -73,6 +87,10 @@ public class PageObjects extends TheScoreGroupId.TheScoreArtifactId.AndroidUtili
 	@AndroidFindBy(accessibility="Today")
 	public WebElement todayTab;
 	
+	@AndroidFindBy(id="com.fivemobile.thescore:id/navigation_bar_item_large_label_view")
+	public WebElement favouritesTab;
+	
+	
 	
 	//functionality
 	public void enterUserNamePassword(String username, String password) 
@@ -90,6 +108,19 @@ public class PageObjects extends TheScoreGroupId.TheScoreArtifactId.AndroidUtili
 		searchBar.click();		
 		searchBarType.sendKeys(team);
 		firstSearchResult.click();		
+		
+	}
+	
+	public void searchFavTeam(String team)
+	{
+		
+		
+		searchFavTeam.click();
+		searchBarType.sendKeys(team);
+		followTeamButton.click();
+		continueButton.click();
+		continueButton.click();
+		
 		
 	}
 	
@@ -117,5 +148,7 @@ public class PageObjects extends TheScoreGroupId.TheScoreArtifactId.AndroidUtili
 			
 		}
 	}
+	
+	
 	
 }
